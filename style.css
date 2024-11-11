@@ -1,0 +1,142 @@
+/* Загальний фон для header і hero */
+.hero-background {
+    background-image: url('image/first-bg.png');
+    background-size: cover;
+    background-position: center; /* Зміщуємо фото праворуч */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    height: 100vh; /* Фон покриває всю висоту екрану */
+    margin: 0;
+    padding: 0;
+}
+
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header і Hero об'єднані в один блок */
+.hero-background nav {
+    position: absolute;
+    top: 50px;
+    right: 150px; /* Відступ праворуч */
+    z-index: 1; /* Щоб меню було поверх фону */
+}
+
+.hero-background nav{
+margin-right: 120px;
+}
+
+.hero-background nav ul {
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-background nav ul li {
+    margin: 0 25px;
+}
+
+/* Відступ між логотипом і наступними елементами меню */
+.hero-background nav ul li:first-child {
+    margin-right: 280px;
+}
+
+.hero-background nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+/* Hero Section */
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    padding: 0px;
+}
+
+.hero-content h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 75px;
+    white-space: nowrap;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-content p {
+    margin-top: 400px;  
+    font-size: 40px;
+    margin: 20px;
+    font-weight: lighter;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #333;
+    padding: 22px 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 0px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 85px 10px;
+}
+
+.services h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.services p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 265px;
+    text-align: center;
+}
+
+.service-item .service-icon {
+    font-size: 40px;
+    color: #FFD700;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
