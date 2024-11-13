@@ -148,15 +148,14 @@ margin-right: 120px;
     margin-bottom: 20px;
 }
 
-.service-item .service-icon {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border-radius: 50%; 
+.service-item {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.service-item .service-icon:hover {
-    background-color: rgba(255, 215, 0, 0.2);
-    transform: scale(1.1);
+.service-item:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
-
