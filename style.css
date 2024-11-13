@@ -93,6 +93,13 @@ margin-right: 120px;
     margin-top: 0px;
 }
 
+.hero-content .btn:hover {
+    background-color: #ffc800;
+    color: #fff;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 /* Services Section */
 .services {
     text-align: center;
@@ -140,3 +147,16 @@ margin-right: 120px;
     color: #777;
     margin-bottom: 20px;
 }
+
+.service-item .service-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 50%; 
+}
+
+.service-item .service-icon:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    transform: scale(1.1);
+}
+
+
+
