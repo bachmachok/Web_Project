@@ -9,23 +9,27 @@
 <body>
     <section class="hero-background">
         <nav>
-            <ul>
-                <li><img src="image/logo.png" alt="Golden Studio Logo"></li>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+            <ul class="menu">
+                <li class="logo"><img src="image/logo.png" alt="Golden Studio Logo"></li>
+                <div class="menu-items">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+                <button class="burger-menu" aria-label="Toggle menu">
+                    ☰
+                </button>
             </ul>
         </nav>
         <div class="hero-content">
-            <p>WELCOME TO OUR STUDIO!</p>
-            <h1>IT`S NICE TO MEET YOU</h1>
+            <p>Welcome to our studio!</p>
+            <h1>It`s nice to meet you</h1>
             <a href="#about" class="btn">TELL ME MORE</a>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <h2>SERVICES</h2>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -48,5 +52,6 @@
         </div>
     </section>
 
+    <script src="main.js"></script>
 </body>
 </html>

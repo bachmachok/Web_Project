@@ -2,12 +2,12 @@
 .hero-background {
     background-image: url('image/first-bg.png');
     background-size: cover;
-    background-position: center; /* Зміщуємо фото праворуч */
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    height: 100vh; /* Фон покриває всю висоту екрану */
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -20,77 +20,86 @@ body {
     color: #333;
 }
 
-/* Header і Hero об'єднані в один блок */
-.hero-background nav {
+/* Меню */
+nav {
     position: absolute;
-    top: 50px;
-    right: 150px; /* Відступ праворуч */
-    z-index: 1; /* Щоб меню було поверх фону */
+    top: 50px; /* Відступ від верхнього краю екрану */
+    left: 15%; /* Відступи зліва */
+    right: 15%; /* Відступи справа */
+    z-index: 10;
 }
 
-.hero-background nav{
-margin-right: 120px;
-}
 
-.hero-background nav ul {
-    max-width: 1000px;
+.menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.hero-background nav ul li {
-    margin: 0 25px;
+.menu .logo {
+    margin-right: auto;
 }
 
-/* Відступ між логотипом і наступними елементами меню */
-.hero-background nav ul li:first-child {
-    margin-right: 280px;
+.menu .menu-items {
+    display: flex;
+    gap: 75px; /* Відступ між пунктами */
 }
 
-.hero-background nav ul li a {
+.menu .menu-items a {
     color: #fff;
     text-decoration: none;
-    font-weight: lighter;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Hero Section */
+/* Оновлення для бургер-меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem; /* Збільшено розмір шрифту */
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Відступ з правого боку */
+    transition: all 0.3s ease; /* Додаємо плавність анімації */
+}
+
+/* Hero Content */
 .hero-content {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    z-index: 1;
-    padding: 0px;
+}
+
+.hero-content h1,
+.hero-content p {
+    text-transform: uppercase;
 }
 
 .hero-content h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 75px;
-    white-space: nowrap;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    font-size: 3.5rem;
+    margin: 20px 0;
 }
 
 .hero-content p {
-    margin-top: 400px;  
-    font-size: 40px;
-    margin: 20px;
-    font-weight: lighter;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .hero-content .btn {
     display: inline-block;
     background-color: #FFD700;
     color: #333;
-    padding: 22px 50px;
+    padding: 15px 40px;
     font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
     border-radius: 3px;
-    margin-top: 0px;
+    text-decoration: none;
 }
 
 .hero-content .btn:hover {
@@ -103,19 +112,13 @@ margin-right: 120px;
 /* Services Section */
 .services {
     text-align: center;
-    padding: 85px 10px;
+    padding: 50px 10px;
 }
 
-.services h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-    margin-top: 40px;
-}
-
+.services h2,
 .services p {
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Відступ між заголовком і текстом */
 }
 
 .services-container {
@@ -127,35 +130,60 @@ margin-right: 120px;
 
 .service-item {
     background-color: #fff;
-    padding: 20px;
-    width: 265px;
+    padding: 30px;
+    width: 250px;
     text-align: center;
-}
-
-.service-item .service-icon {
-    font-size: 40px;
-    color: #FFD700;
-}
-
-.service-item h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.service-item p {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 20px;
-}
-
-.service-item {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px; /* Збільшено вертикальний відступ */
 }
 
 .service-item:hover {
-    background-color: rgba(255, 215, 0, 0.1);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 1063px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu .menu-items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 20px 15%;
+        opacity: 0; /* Меню початково невидиме */
+        transform: translateY(-20px); /* Зміщення для анімації */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Додаємо анімацію */
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* Активація меню при натисканні */
+    .menu .menu-items.active {
+        display: flex;
+        opacity: 1; /* Меню стає видимим */
+        transform: translateY(0); /* Меню поступово з'являється */
+    }
 }
